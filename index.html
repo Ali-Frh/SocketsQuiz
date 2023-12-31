@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<!-- 2023-12-20 12:40 AM Ali Frh here we go -->
+<!-- damn, v1.0 released on  2023-12-31  -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sockets Quiz</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/responsive.css">
+    <script src="assets/language.js"></script>
+    <meta name="description" content="a Little fun game about guessing electronic sockets and plugs."> 
+    <meta name="theme-color" content="#0d449c">
+</head>
+<body>
+
+    <!-- these are dialogs -->
+
+    <div id="res" class="pop res">
+        <div class="contain">
+            <!-- <p class="percent" dir="auto">
+                11
+                
+                <span>
+
+                    از
+                </span>
+            12
+            </p> -->
+            <p class="headr" dir="auto">
+[win_head]
+                <br>
+[win_head2]
+            </p>
+            <button onclick="closeNQuit()">[homebtn]</button>
+            <img src="assets/happy-dude1.png " alt="">
+
+        </div>
+    </div>
+
+
+    <div id="lost" class="pop lost">
+        <div class="contain">
+            <p class="headr" dir="auto">
+                <span class="first">
+[suck_head]
+                </span>
+            <br>
+                <span class="second"> 
+
+[suck_head2]
+                </span>
+            </p>
+            <div class="section">
+                <img src="assets/frog.png " alt="">
+
+                <div id="butts">
+                    
+                    <button onclick="tryAgain()">[tryagain]</button>
+                    <button onclick="closeNQuit()">[quit]</button>
+            </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="quit" class="quit pop">
+        <div class="contain">
+            <p class="headr" dir="auto">
+                [surrender_head1]
+                <br>
+                [surrender_head2]
+            </p>
+            <div class="section">
+                <img src="assets/dwayne.png " alt="">
+
+                <div id="butts">
+                    
+                    <button onclick="flee()">[homebtn]</button>
+                <button onclick="closeFlee()">  [continuebtn]    </button>
+            </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- entry point is here -->
+
+    <div id="lang-step" class="">
+        <button onclick="langu('en')" class="en rem1-6">
+            English
+            <img class="lang-flag" src="assets/EN.png" alt="">
+        </button>
+        <button onclick="langu('fa' )" class="fa rem1-6">
+            <img class="lang-flag-ir" src="assets/ir.png" alt="">
+            فارسی
+            
+        </button> 
+    </div>
+
+    <div id="menu-fa" class="menu">
+        <div class="sub-menu sub-menu-fa">
+            <img src="lo.png" class="logo" alt="">
+            <p class="name-fa">چالش حدس رابط</p>
+            <button class="menu-butt " onclick="falevel(1)">
+                <span class="grade-fa easy">آسان </span>
+                مربوط به موبایل
+                <img src="assets/mobile-phone-svgrepo-com.svg" width="50px" alt="" srcset="">
+            </button>
+            <button class="menu-butt ">
+                <span class="grade-fa       medium">متوسط</span>
+
+                کامپیوتری 1
+                <img src="assets/computer-svgrepo-com.svg" width="50px" alt="" srcset="">
+
+            </button>
+            <button class="menu-butt ">
+                <span class="grade-fa hard">سخت</span>
+                <span class="menu-label-fa">
+                    کامپیوتری 2
+                </span>
+                <img src="assets/computer-svgrepo-com (1).svg" width="50px" alt="" srcset="">
+           
+            </button>
+            <button class="menu-butt ">
+                <span class="grade-fa fhard " >خیلی
+                    <br/>
+                    سخت</span>
+                <span class="menu-label-fa">
+
+                    پریز برق کشورها 
+                </span>
+                <img src="assets/socket-electric-svgrepo-com.svg" width="50px" alt="" srcset="">
+
+                <!-- <span>راحت</span> -->
+
+            </button>
+
+            <p class="credit">
+                Made by <a href="https://github.com/ALi-Frh">
+                    Ali Frh
+
+                </a>
+            </p>
+        </div>
+
+    </div>
+
+    <div id="menu-en">
+        <div class="sub-menu sub-menu-fa">
+            <img src="lo.png" class="logo" alt="">
+            <p class="name-fa">[app_name]</p>
+            <button class="menu-butt " onclick="falevel(1)">
+                <span class="grade-fa easy">[easy] </span>
+                <span class="menu-label-fa">
+                [about_mobile]
+                </span>
+                <img src="assets/mobile-phone-svgrepo-com.svg" width="50px" alt="" srcset="">
+            </button>
+            <button class="menu-butt ">
+                <span class="grade-fa       medium">[medium]</span>
+                <span class="menu-label-fa">
+                [pc_1]
+                </span>
+                <img src="assets/computer-svgrepo-com.svg" width="50px" alt="" srcset="">
+            </button>
+
+            <button class="clock " onclick="locked()">
+                <img onclick="" class="lock" src="assets/lock-svgrepo-com.svg" width="40px" alt="">
+                <img onclick="" class="lock lock1" src="assets/lock-svgrepo-com.svg" width="40px" alt="">           
+            </button>
+
+            <button class="menu-butt ">
+                <span class="grade-fa hard">[hard]</span>
+                <span class="menu-label-fa">
+                [pc_2]
+                </span>
+                <img src="assets/computer-svgrepo-com (1).svg" width="50px" alt="" srcset="">
+           
+            </button>
+            <button class="clock " onclick="locked()">
+                <img onclick="locked()" class="lock" src="assets/lock-svgrepo-com.svg" width="40px" alt="">
+                <img onclick="locked()" class="lock lock1" src="assets/lock-svgrepo-com.svg" width="40px" alt="">           
+            </button>
+
+            <button class="menu-butt ">
+                <span class="grade-fa fhard " >[fhard] </span>
+                <span class="menu-label-fa">
+                [country_plugs] 
+                </span>
+                <img src="assets/socket-electric-svgrepo-com.svg" width="50px" alt="" srcset="">
+
+                <!-- <span>راحت</span> -->
+
+            </button>
+
+            <button class="clock " onclick="locked()">
+                <img onclick="locked()" class="lock" src="assets/lock-svgrepo-com.svg" width="40px" alt="">
+                <img onclick="locked()" class="lock lock1" src="assets/lock-svgrepo-com.svg" width="40px" alt="">           
+            </button>
+
+             <button class="menu-butt " onclick="change_lang()">
+                <span class="grade-fa black " >[deadly] </span>
+                <span class="menu-label-fa">
+                [death_match] 
+                </span>
+                <img src="assets/death-skull-and-bones-svgrepo-com.svg" width="50px" alt="" srcset="">
+
+
+             </button>
+
+             <button class="clock " onclick="locked()">
+                <img onclick="locked()" class="lock" src="assets/lock-svgrepo-com.svg" width="40px" alt="">
+                <img onclick="locked()" class="lock lock1" src="assets/lock-svgrepo-com.svg" width="40px" alt="">           
+            </button>
+
+
+
+            <p class="credit">
+                <span>
+
+                    Made by <a href="https://github.com/ALi-Frh">
+                        Ali Frh
+    
+                    </a>
+                    <span>
+
+                        v1.0
+                    </span>
+            </span>
+                <button class="langbtn" onclick="change_lang()">[change_lang]</button>
+            </p>
+        </div> 
+    </div>
+    <script src="questions/data.js"></script>
+    <div id="qfues">
+        <div class="qfcontainer">
+            <div class="qfgrid"> 
+                <div class="qfhead">
+                    <img onclick="fleePrompt()" class="mini-icon qfh-left" src="assets/home-1-svgrepo-com.svg" alt="">
+                    <div class="qfh-center">
+
+                        <img class=" fram" src="assets/frame.png" alt="">
+                        <span>
+                           [app_name_header]
+                        </span>
+                    </div>
+                    <a href="#" class="qfh-right">
+                        <img class="mini-icon " onclick="soundToggle()" src="assets/music-note-svgrepo-com.svg" alt="">
+                        <img class=" cross" src="assets/cross.svg" alt="">
+                        
+                    </a>
+                    
+                </div>  
+
+                <div class="qfquestion">
+                    <img src="questions/[qp]" alt="">
+                </div>
+                <span class="qfquestring" dir="auto">[q#].
+                    [q]</span>
+                
+                <div class="qfans">
+                    <button onclick="submit('[ans1]','bt1')" class="qfbtn bt1">[ans1]</button>
+                    <button onclick="submit('[ans2]','bt2')" class="qfbtn bt2">[ans2]</button>
+                    <button onclick="submit('[ans3]', 'bt3')" class="qfbtn bt3">[ans3]</button>
+                    <button onclick="submit('[ans4]', 'bt4')" class="qfbtn bt4">[ans4] </button>
+                </div>
+
+            </div>
+        </div>
+    <div class="scoreboard">
+        <div class="west lives">
+            <img src="assets/heart-svgrepo-com.svg" width="35px" alt="">
+            <img src="assets/heart-svgrepo-com.svg" width="35px" alt="">
+            <img src="assets/heart-svgrepo-com.svg" class="dirt" width="35px" alt="">
+        </div>
+
+        <div class="east">
+            <span class="from">6</span>
+            <span class="divid">/</span>
+            
+            <span class="to">9</span>
+        </div>
+    </div>
+    
+    </div>
+
+    
+
+    
+    <script src="assets/script.js"></script>
+</body>
+</html>
