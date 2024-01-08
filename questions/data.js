@@ -158,3 +158,160 @@ var level1 = {
     // "other":"blue"
 }
 
+var level2 = {
+    1:{
+        "image":"2/1.jpg",
+        "question":{
+            "fa":"سوکت بالا چه نام دارد ؟",
+            "en": "Which socket is this ?"
+        },
+        "answers":{
+            "4":{"fa":"USB-A", "en":"USB-A"},
+            "1":{"fa":"UPS", "en":"UPS"},
+            "2":{"fa":"فلش ", "en":"Flash"},
+            "3":{"fa":" سریال ", "en":"Serial"},
+        },
+        "correct":"4"
+    }, 
+    2:{
+        "image":"2/2.jpg",
+        "question":{
+            "fa":"سوکت بالا چه نام دارد ؟",
+            "en": "Which socket is this ?"
+        },
+        "answers":{
+            "4":{"fa":"USB-B", "en":"USB-B"},
+            "1":{"fa":"USB-D", "en":"USB-D"},
+            "2":{"fa":" تاندربولت ", "en":"Thunderbolt"},
+            "3":{"fa":" سریال ", "en":"Serial"},
+        },
+        "correct":"4"
+    }, 
+    3:{
+        "image":"2/3.webp" ,
+        "question":{
+            "fa":"سوکت بالا چه نام دارد ؟",
+            "en": "Which socket is this ?"
+        },
+        "answers":{
+            "4":{"fa":"جک 3.5 میلیمتری", "en":"3.5mm Jack"},
+            "1":{"fa":"جک 2.5 میلیـمتری", "en":"2.5mm Jack"},
+            "2":{"fa":" آر اف ", "en":"RF"},
+            "3":{"fa":" AV ", "en":"AV"},
+        },
+        "correct":"4"
+    }, 
+    4:{
+        "image":"2/4.jpg" ,
+        "question":{
+            "fa":"سوکت بالا چه نام دارد ؟",
+            "en": "Which socket is this ?"
+        },
+        "answers":{
+            "4":{"fa":"PS/2", "en":"PS/2"},
+            "1":{"fa":"پاور", "en":"Power"},
+            "2":{"fa":" USB-0 ", "en":"USB-0"},
+            "3":{"fa":"  مینی سریال  ", "en":"Mini Serial"},
+        },
+        "correct":"4"
+    },
+    5:{
+        "image":"2/5.webp" ,
+        "question":{
+            "fa":"سوکت بالا چه نام دارد ؟",
+            "en": "Which socket is this ?"
+        },
+        "answers":{
+            "4":{"fa":"تاندربولت", "en":"Thunderbolt"},
+            "1":{"fa":"USB-C", "en":"USB-C"},
+            "2":{"fa":" مینی HDMI ", "en":"Mini  HDMI"},
+            "3":{"fa":"  اترنت  ", "en":"Ethernet"},
+        },
+        "correct":"4"
+    }, 
+    6:{
+        "image":"2/6.jpg" ,
+        "question":{
+            "fa":"سوکت بالا چه نام دارد ؟",
+            "en": "Which socket is this ?"
+        },
+        "answers":{
+            "4":{"fa":"اترنت", "en":"Ethernet"},
+            "1":{"fa":"تلفن", "en":"Phone"},
+            "2":{"fa":" RJ-12 ", "en":"RJ-12"},
+            "3":{"fa":"  گیگابیت  ", "en":"Gigabit"},
+        },
+        "correct":"4"
+    },
+    7:{
+        "image":"2/7.jpg" ,
+        "question":{
+            "fa":"سوکت بالا چه نام دارد ؟",
+            "en": "Which socket is this ?"
+        },
+        "answers":{
+            "4":{"fa":"اترنت", "en":"Ethernet"},
+            "1":{"fa":"RJ-45", "en":"RJ-45"},
+            "3":{"fa":"  RJ-11  ", "en":"RJ-11"},
+            "2":{"fa":" RJ-17 ", "en":"RJ-17"},
+        },
+        "correct":"3"
+    },
+    8:{
+        "image":"2/8.jpg" ,
+        "question":{
+            "fa":"نام کابل های بالا چیست ؟",
+            "en": "Which cable are those ?"
+        },
+        "answers":{
+            "4":{"fa":"اترنت", "en":"Ethernet"},
+            "1":{"fa":"سیسکو", "en":"Cisco"},
+            "3":{"fa":"  فیوژن  ", "en":"Fusion "},
+            "2":{"fa":" فیبر نوری ", "en":"Fiber Optic"},
+        },
+        "correct":"2"
+    },
+    9:{
+        "image":"2/9.webp" ,
+        "question":{
+            "fa":"کابل بالا چه نام دارد ؟",
+            "en": "Which cable is this ?"
+        },
+        "answers":{
+            "4":{"fa":"دیسپلی", "en":"Display"},
+            "1":{"fa":"HDMI", "en":"HDMI"},
+            "3":{"fa":"  سریال  ", "en":"Serial "},
+            "2":{"fa":" VGA ", "en":"VGA"},
+        },
+        "correct":"2"
+    }, 
+    10:{
+        "image":"2/10.webp" ,
+        "question":{
+            "fa":"کابل بالا چه نام دارد ؟",
+            "en": "Which cable is this ?"
+        },
+        "answers":{
+            "4":{"fa":"تاندربولت", "en":"Thunderbolt "},
+            "1":{"fa":"HDMI", "en":"HDMI"},
+            "3":{"fa":"  مینی HDMI  ", "en":"Mini HDMI "},
+            "2":{"fa":" VGA ", "en":"VGA"},
+        },
+        "correct":"1"
+    },
+    11:{
+        "image":"2/11.jpg" , 
+        "question":{
+            "fa":"کابل بالا چه نام دارد ؟",
+            "en": "Which cable is this ?"
+        },
+        "answers":{
+            "4":{"fa":"شبکه", "en":"Ethernet "},
+            "1":{"fa":"سریال", "en":"Serial"},
+            "3":{"fa":"  DVI  ", "en":" DVI "},
+            "2":{"fa":" VGA ", "en":"VGA"},
+        },
+        "correct":"1"
+    }
+    
+} 
