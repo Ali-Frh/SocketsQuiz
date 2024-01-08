@@ -32,7 +32,7 @@ strings = {
         "en": "Really Hard"
       },
       "country_plugs": {
-        "fa": "پریز برق کشورها",
+        "fa": "پریز کشور ها",
         "en": "Power Outlets"
       },
       "crlang":{
@@ -98,7 +98,20 @@ strings = {
        } ,    
        "continuebtn": {
         "fa": "ادامه میدم ", "en": " Continue "
+       },
+       "level1": {
+        "fa": "مرحله 1", "en": "Level 1"
+       },
+       "level2": {
+        "fa": "مرحله 2", "en": "Level 2"
+       }, 
+       "level3": {
+        "fa": "مرحله 3", "en": "Level 3"
+       }, 
+       "level4": {
+        "fa": "مرحله 4", "en": "Level 4"
        }
+
     } 
 
 // function _(st) {
