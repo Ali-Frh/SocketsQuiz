@@ -37,8 +37,46 @@ function falevel(level) {
         document.getElementById("menu-en").style.display="none";
         // document.getElementById("qfues").style.display="block";
         startGame("level1");
+    } else if (level == "2") {
+        document.getElementById("menu-en").style.display="none";
+        startGame("level2");
+
     }
 
+}
+
+function updateLevelState() {
+    let state = getCookie("state");
+    console.log(state);
+    switch (state) {
+        case null:
+            document.getElementsByClassName("l2lock")[0].style.display="block";
+            document.getElementsByClassName("l3lock")[0].style.display="block";
+            document.getElementsByClassName("l4lock")[0].style.display="block";
+            document.getElementsByClassName("l5lock")[0].style.display="block";
+            setCookie("state", "1", "999");     // for the null guy
+            break;
+        case "1":
+            document.getElementsByClassName("l2lock")[0].style.display="block";
+            document.getElementsByClassName("l3lock")[0].style.display="block";
+            document.getElementsByClassName("l4lock")[0].style.display="block";
+            document.getElementsByClassName("l5lock")[0].style.display="block";
+            break;
+        case "2":
+            document.getElementsByClassName("l2lock")[0].style.display="none";
+            document.getElementsByClassName("l3lock")[0].style.display="block";
+            document.getElementsByClassName("l4lock")[0].style.display="block";
+            document.getElementsByClassName("l5lock")[0].style.display="block";
+            break;
+        case "3":
+            document.getElementsByClassName("l2lock")[0].style.display="none";
+            document.getElementsByClassName("l3lock")[0].style.display="block";
+            document.getElementsByClassName("l4lock")[0].style.display="block";
+            document.getElementsByClassName("l5lock")[0].style.display="block";
+            break;
+        default:
+            break;
+    }
 }
 
 
@@ -143,6 +181,7 @@ function getCookie(name) {
 
 window.onload = function() {
     let lang = getCookie("user_lang");
+    updateLevelState();
     if (lang == null) {
         document.getElementById("lang-step").style.display="flex";
 
@@ -216,7 +255,7 @@ function showQuestion(level, questionIter) {
     temp = temp.replace("[qp]" , question["image"]);
     temp = temp.replace("[q#]", questionIter);
     temp = temp.replace("[q]", question["question"][lang]);
-    temp = temp.replace("[app_name_header]", window.strings["level"][lang] + " 1");
+    temp = temp.replace("[app_name_header]", window.strings[level][lang]);
 
     // scrambling answers
     ansorder = shuffleNumbersList(4);
@@ -469,6 +508,24 @@ function showResult() {
     temp.innerHTML = translatePlaceholders(template.innerHTML)
     document.body.insertBefore(temp, template);
 
+
+    // unlock new level
+
+    let curr = window.currentLevel.split("level")[1];
+    let state = getCookie("state");
+    if ( state == null ) {
+        state = "1";
+        setCookie("state", "1", "999");
+        
+    }
+
+    curr =  parseInt(curr);
+    if ( curr == state ) { // you are in the last unlocked level 
+        if ( curr != "4") { // last level
+            setCookie("state", curr + 1, "999");
+            updateLevelState();
+        }
+    }
 
 
     
