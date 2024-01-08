@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <!-- 2023-12-20 12:40 AM Ali Frh here we go -->
+<!-- CL (change log): inital version. -->
 <!-- damn, v1.0 released on  2023-12-31  -->
+
+<!-- its 2024-01-07 and im gonna work on v1.1 -->
+<!-- CL: level unlocking logic + level 2 questions -->
+<!-- v1.1 done on 2024-01-08 -->
+
+
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -157,7 +165,7 @@
                 </span>
                 <img src="assets/mobile-phone-svgrepo-com.svg" width="50px" alt="" srcset="">
             </button>
-            <button class="menu-butt ">
+            <button class="menu-butt "    onclick="falevel(2)"> 
                 <span class="grade-fa       medium">[medium]</span>
                 <span class="menu-label-fa">
                 [pc_1]
@@ -165,7 +173,7 @@
                 <img src="assets/computer-svgrepo-com.svg" width="50px" alt="" srcset="">
             </button>
 
-            <button class="clock " onclick="locked()">
+            <button class="clock l2lock " onclick="locked()">
                 <img onclick="" class="lock" src="assets/lock-svgrepo-com.svg" width="40px" alt="">
                 <img onclick="" class="lock lock1" src="assets/lock-svgrepo-com.svg" width="40px" alt="">           
             </button>
@@ -178,7 +186,7 @@
                 <img src="assets/computer-svgrepo-com (1).svg" width="50px" alt="" srcset="">
            
             </button>
-            <button class="clock " onclick="locked()">
+            <button class="clock l3lock " onclick="locked()">
                 <img onclick="locked()" class="lock" src="assets/lock-svgrepo-com.svg" width="40px" alt="">
                 <img onclick="locked()" class="lock lock1" src="assets/lock-svgrepo-com.svg" width="40px" alt="">           
             </button>
@@ -194,7 +202,7 @@
 
             </button>
 
-            <button class="clock " onclick="locked()">
+            <button class="clock l4lock " onclick="locked()">
                 <img onclick="locked()" class="lock" src="assets/lock-svgrepo-com.svg" width="40px" alt="">
                 <img onclick="locked()" class="lock lock1" src="assets/lock-svgrepo-com.svg" width="40px" alt="">           
             </button>
@@ -209,7 +217,7 @@
 
              </button>
 
-             <button class="clock " onclick="locked()">
+             <button class="clock l5lock " onclick="locked()">
                 <img onclick="locked()" class="lock" src="assets/lock-svgrepo-com.svg" width="40px" alt="">
                 <img onclick="locked()" class="lock lock1" src="assets/lock-svgrepo-com.svg" width="40px" alt="">           
             </button>
@@ -225,7 +233,7 @@
                     </a>
                     <span>
 
-                        v1.0
+                        v1.1
                     </span>
             </span>
                 <button class="langbtn" onclick="change_lang()">[change_lang]</button>
