@@ -41,6 +41,10 @@ function falevel(level) {
         document.getElementById("menu-en").style.display="none";
         startGame("level2");
 
+    } else if (level=="3"){
+        document.getElementById("menu-en").style.display="none";
+        startGame("level3");
+
     }
 
 }
@@ -70,7 +74,13 @@ function updateLevelState() {
             break;
         case "3":
             document.getElementsByClassName("l2lock")[0].style.display="none";
-            document.getElementsByClassName("l3lock")[0].style.display="block";
+            document.getElementsByClassName("l3lock")[0].style.display="none";
+            document.getElementsByClassName("l4lock")[0].style.display="block";
+            document.getElementsByClassName("l5lock")[0].style.display="block";
+            break;
+        case "4":
+            document.getElementsByClassName("l2lock")[0].style.display="none";
+            document.getElementsByClassName("l3lock")[0].style.display="none";
             document.getElementsByClassName("l4lock")[0].style.display="block";
             document.getElementsByClassName("l5lock")[0].style.display="block";
             break;
@@ -182,6 +192,29 @@ function getCookie(name) {
 window.onload = function() {
     let lang = getCookie("user_lang");
     updateLevelState();
+
+// preload
+    var cache = document.createElement("CACHE");
+    cache.style = "position:absolute;z-index:-1000;opacity:0;";
+    document.body.appendChild(cache);
+
+    ["assets/heart-svgrepo-com%20(2).svg"].forEach((e)=>{
+        preloadImage(e);
+    });
+
+
+    // if ('serviceWorker' in navigator) {
+    //     navigator.serviceWorker.register('audio-preload.js')
+    //         .then((registration) => {
+    //             console.log('Service Worker registered with scope:', registration.scope);
+    //         })
+    //         .catch((error) => {
+    //             console.error('Service Worker registration failed:', error);
+    //         });
+    // } 
+
+    
+
     if (lang == null) {
         document.getElementById("lang-step").style.display="flex";
 
@@ -239,7 +272,6 @@ function showQuestion(level, questionIter) {
 
     var questions = window[level];
     var question = questions[window.order[questionIter-1]];
-    console.log(window.order);
     // console.log(window.order[questionIter]);
 
     var lang = getCookie("user_lang");
@@ -251,7 +283,6 @@ function showQuestion(level, questionIter) {
     el.classList . add("temp") ;
 
     let temp = question_structure;
-    console.log(question["image"]);
     temp = temp.replace("[qp]" , question["image"]);
     temp = temp.replace("[q#]", questionIter);
     temp = temp.replace("[q]", question["question"][lang]);
@@ -534,6 +565,12 @@ function showResult() {
 function startGame(level){
     // var lang = getCookie("user_lang");
     // question_structure = document.getElementById("qfues").innerHTML;
+    let temp = document.getElementById("loading"); 
+    temp.innerHTML = translatePlaceholders(temp.innerHTML)
+
+
+    preload(level);
+
     var questions = window[level];
      total_questions = Object.keys(questions).length;
     // console.log (total_questions);

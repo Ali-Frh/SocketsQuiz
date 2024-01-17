@@ -88,6 +88,12 @@
         max-height: 40vh;
     }
     
+    /* .qfgrid {
+        max-height: 85vh;
+    }
+    .scoreboard {
+        padding: 20px 0 0 0;
+    } */
 }
 
 @media (min-width: 541px){

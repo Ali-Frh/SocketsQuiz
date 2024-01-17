@@ -110,6 +110,12 @@ strings = {
        }, 
        "level4": {
         "fa": "مرحله 4", "en": "Level 4"
+       },
+       "loading1": {
+        "fa": "در حال بارگذاری", "en": "Loading ..."
+       }, 
+       "loading2": {
+        "fa": "لطفا کمی صبر کنید", "en": "Be patient a little"
        }
 
     } 
