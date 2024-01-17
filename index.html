@@ -7,7 +7,9 @@
 <!-- CL: level unlocking logic + level 2 questions -->
 <!-- v1.1 done on 2024-01-08 -->
 
-
+<!-- 2024-01-12 working on v1.2 -->
+<!-- CL: level3 + preload -->
+<!-- 2024-01-17 Done -->
 
 <html lang="en">
 <head>
@@ -17,12 +19,28 @@
     <link rel="stylesheet" href="assets/style.css">
     <link rel="stylesheet" href="assets/responsive.css">
     <script src="assets/language.js"></script>
+    <script src="assets/preload.js"></script>
     <meta name="description" content="a Little fun game about guessing electronic sockets and plugs."> 
     <meta name="theme-color" content="#0d449c">
 </head>
 <body>
 
     <!-- these are dialogs -->
+    <div id="loading" class="loading">
+        <div class="contain">
+            
+            <div class="lds-default"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+            <p class="headr" dir="auto">
+                [loading1]
+            <!-- </p> -->
+                
+                <br>
+            <!-- <p class="headr" dir="auto"> -->
+                [loading2]
+            </p>
+            
+        </div>
+    </div>
 
     <div id="res" class="pop res">
         <div class="contain">
@@ -178,7 +196,7 @@
                 <img onclick="" class="lock lock1" src="assets/lock-svgrepo-com.svg" width="40px" alt="">           
             </button>
 
-            <button class="menu-butt ">
+            <button class="menu-butt " onclick="falevel(3)">
                 <span class="grade-fa hard">[hard]</span>
                 <span class="menu-label-fa">
                 [pc_2]
@@ -233,7 +251,7 @@
                     </a>
                     <span>
 
-                        v1.1
+                        v1.2
                     </span>
             </span>
                 <button class="langbtn" onclick="change_lang()">[change_lang]</button>
@@ -268,10 +286,10 @@
                     [q]</span>
                 
                 <div class="qfans">
-                    <button onclick="submit('[ans1]','bt1')" class="qfbtn bt1">[ans1]</button>
-                    <button onclick="submit('[ans2]','bt2')" class="qfbtn bt2">[ans2]</button>
-                    <button onclick="submit('[ans3]', 'bt3')" class="qfbtn bt3">[ans3]</button>
-                    <button onclick="submit('[ans4]', 'bt4')" class="qfbtn bt4">[ans4] </button>
+                    <button dir="auto" onclick="submit('[ans1]','bt1')" class="qfbtn bt1">[ans1]</button>
+                    <button dir="auto" onclick="submit('[ans2]','bt2')" class="qfbtn bt2">[ans2]</button>
+                    <button dir="auto" onclick="submit('[ans3]', 'bt3')" class="qfbtn bt3">[ans3]</button>
+                    <button dir="auto" onclick="submit('[ans4]', 'bt4')" class="qfbtn bt4">[ans4] </button>
                 </div>
 
             </div>
@@ -297,5 +315,7 @@
 
     
     <script src="assets/script.js"></script>
+
+    
 </body>
 </html>
