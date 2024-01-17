@@ -315,3 +315,154 @@ var level2 = {
     }
     
 } 
+
+var level3 = {
+    1:{
+        "image":"3/1.jpg" ,
+        "question":{
+            "fa":"این کابل چه نامی دارد؟",
+            "en": "What is the name of this cable?"
+        },
+        "answers":{
+            "1":{"fa":"کابل ATX", "en":"ATX cable"},
+            "2":{"fa":"کابل SATA", "en":"SATA cable"},
+            "3":{"fa":"کابل Molex", "en":"Molex cable"},
+            "4":{"fa":"کابل IDE", "en":"IDE cable"}
+        },
+        "correct":"1"
+    },
+    2:{
+        "image":"3/2.jpg" ,
+        "question":{
+            "fa":"این کابل چه نامی دارد؟",
+            "en": "What is the name of this cable?"
+        },
+        "answers":{
+            "1":{"fa":"کابل USB-C", "en":"USB-C cable"},
+            "2":{"fa":"کابل SATA", "en":"SATA cable"},
+            "3":{"fa":"کابل DisplayPort", "en":"DisplayPort cable"},
+            "4":{"fa":"کابل Thunderbolt", "en":"Thunderbolt cable"}
+        },
+        "correct":"2"
+    },
+    3:{
+        "image":"3/3.jpg" ,
+        "question":{
+            "fa":"این کابل چه نامی دارد؟",
+            "en": "What is the name of this cable?"
+        },
+        "answers":{
+            "1":{"fa":"کابل برق SATA", "en":"SATA Power cable"},
+            "2":{"fa":"کابل HDMI", "en":"HDMI cable"},
+            "3":{"fa":"کابل Molex", "en":"Molex cable"},
+            "4":{"fa":"4 پین پردازنده", "en":"4-pin CPU cable"}
+        },
+        "correct":"3"
+    }, 
+    4:{
+        "image":"3/4.jpg" ,
+        "question":{
+            "fa":"این کابل چه نامی دارد؟",
+            "en": "What is the name of this cable?"
+        },
+        "answers":{
+            "1":{"fa":"کابل SATA", "en":"SATA cable"},
+            "2":{"fa":"کابل ATX", "en":"ATX cable"},
+            "3":{"fa":"کابل IDE", "en":"IDE cable"},
+            "4":{"fa":"کابل DVI", "en":"DVI cable"}
+        },
+        "correct":"3"
+    }, 
+    5:{
+        "image":"3/5.webp" ,
+        "question":{
+            "fa":"این کابل چه نامی دارد؟",
+            "en": "What is the name of this cable?"
+        },
+        "answers":{
+            "1":{"fa":"کابل USB-C", "en":"USB-C cable"},
+            "2":{"fa":"کابل VGA", "en": "VGA cable"},
+            "3":{"fa":"کابل DVI", "en":"DVI cable"},
+            "4":{"fa":"کابل S/PDIF", "en":"S/PDIF cable"}
+        },
+        "correct":"3"
+    }, 
+    6:{
+        "image":"3/6.jpg" ,
+        "question":{
+            "fa":"این اسلات چه نامی دارد؟",
+            "en": "What is the name of this slot?"
+        },
+        "answers":{
+            "1":{"fa":"اسلات RAM", "en":"RAM slot"},
+            "2":{"fa":"اسلات PCIe", "en":"PCIe slot"},
+            "3":{"fa":"اسلات GPU", "en":"GPU slot"},
+            "4":{"fa":"اسلات M.2", "en":"M.2 slot"}
+        },
+        "correct":"2"
+    }, 
+    7:{
+        "image":"3/7.jpg" ,
+        "question":{
+            "fa":"این کابل چه نامی دارد؟",
+            "en": "What is the name of this cable?"
+        },
+        "answers":{
+            "1":{"fa":"کابل S/PDIF", "en":"S/PDIF cable"},
+            "2":{"fa":"کابل Flash", "en":"Flash cable"},
+            "3":{"fa":"کابل DVI", "en":"DVI cable"},
+            "4":{"fa":"کابل RCA", "en":"RCA cable"}
+        },
+        "correct":"4"
+    }, 
+    8:{
+        "image":"3/8.jpg" ,
+        "question":{
+            "fa":"این کابل چه نامی دارد؟",
+            "en": "What is the name of this cable?"
+        },
+        "answers":{
+            "1":{"fa":"کابل USB-C", "en":"USB-C cable"},
+            "2":{"fa":"کابل HDMI", "en":"HDMI cable"},
+            "3":{"fa":"کابل Thunderbolt", "en":"Thunderbolt cable"},
+            "4":{"fa":"کابل Firewire", "en":"Firewire cable"}
+        },
+        "correct":"4"
+    }, 
+    9:{
+        "image":"3/9.jpg" ,
+        "question":{
+            "fa":"این کابل‌ها چه نامی دارند؟",
+            "en": "What are these cables called?"
+        },
+        "answers":{
+            "1":{"fa":"کابل‌های Power", "en":"Power cables"},
+            "2":{"fa":"کابل‌های SATA", "en":"SATA cables"},
+            "3":{"fa":"کابل‌های آنتن", "en":"Antenna cables"},
+            "4":{"fa":"کابل‌های RF", "en":"RF cables"}
+        },
+        "correct":"4"
+    }, 
+    10:{
+        "image":"3/10.jpg" ,
+        "question":{
+            "fa":"این کابل چه نامی دارد؟",
+            "en": "What is the name of this cable?"
+        },
+        "answers":{
+            "1":{"fa":"کابل RCA", "en":"RCA cable"},
+            "2":{"fa":"کابل Firewire", "en":"Firewire cable"},
+            "3":{"fa":"کابل فیبر نوری", "en":"Optical fiber cable"},
+            "4":{"fa":"کابل S/PDIF", "en":"S/PDIF cable"}
+        },
+        "correct":"4"
+    }
+
+
+
+
+
+
+
+
+}
