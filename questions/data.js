@@ -466,3 +466,121 @@ var level3 = {
 
 
 }
+
+var level4 =     {
+     1: {
+        "image": "4/a.jpg",
+        "question": {
+            "fa": "پریز بالا در کدام کشور استفاده نمیشود ؟",
+            "en": "Which country doesn't use this plug ?"
+        }, 
+        "answers": {
+            "1":{"fa":"ایالات متحده آمریکا", "en": "United States" },
+            "2":{"fa": "انگلیس", "en": "United Kingdom" }, 
+            "3": {"fa": "کانادا", "en": "Canada"}, 
+            "4": {"fa": "ژاپن", "en": "Japan"}
+        },
+        "correct": "2"
+    }, 
+    2: {
+        "image": "4/f.jpg",
+        "question": {
+            "fa": "پریز بالا در کدام کشور استفاده نمیشود ؟",
+            "en": "Which country doesn't use this plug ?"
+        }, 
+        "answers": {
+            "1":{"fa":"اروپا", "en": "Europe" },
+            "2":{"fa": "ایرلند", "en": "Ireland" }, 
+            "3": {"fa": "روسیه", "en": "Russia"}, 
+            "4": {"fa": "ایران", "en": "Iran    "}
+        },
+        "correct": "2"
+    },
+    3: {
+        "image": "4/d.jpg",
+        "question": {
+            "fa": "پریز بالا در کدام کشور استفاده می شود ؟",
+            "en": "Which country use this plug ?"
+        }, 
+        "answers": {
+            "1":{"fa":"اسرائیل", "en": "Israel" },
+            "2":{"fa": "هندوستان", "en": "India" }, 
+            "3": {"fa": "روسیه", "en": "Russia"}, 
+            "4": {"fa": "ترکیه", "en": "Turkey"}
+        },
+        "correct": "2"
+    },
+    4: {
+        "image": "4/g.jpg",
+        "question": {
+            "fa": "پریز بالا در کدام کشور استفاده نمی شود ؟",
+            "en": "Which country doesn't use this plug ?"
+        }, 
+        "answers": {
+            "1":{"fa":"چین", "en": "China" },
+            "2":{"fa": "انگلیس", "en": "United Kingdom" }, 
+            "3": {"fa": "سنگاپور", "en": "Singapore"}, 
+            "4": {"fa": "مالزی", "en": "Malaysia" }
+        },
+        "correct": "1"
+    },    
+    
+    5: {
+        "image": "4/h.jpg",
+        "question": {
+            "fa": "پریز بالا در کدام کشور استفاده نمیشود ؟",
+            "en": "Which country doesn't use this plug ?"
+        }, 
+        "answers": {
+            "1":{"fa":"اردن", "en": "Jordan" },
+            "2":{"fa": "وست بانک", "en": "West Bank" }, 
+            "3": {"fa": "غزه", "en": "Gaza"}, 
+            "4": {"fa": "اسرائیل", "en": "Israel"}
+        },
+        "correct": "1"
+    },
+    6: {
+        "image": "4/i.jpg",
+        "question": {
+            "fa": "پریز بالا در کدام کشور استفاده نمیشود ؟",
+            "en": "Which country doesn't use this plug ?"
+        }, 
+        "answers": {
+            "1":{"fa":"چین", "en": "China" },
+            "2":{"fa": "استرالیا", "en": "Australia" }, 
+            "4": {"fa": "عربستان سعودی", "en": "Saudi Arabia"}, 
+            "3": {"fa": "نیوزیلند", "en": "New Zealand    "}
+        },
+        "correct": "4"
+    },
+    7: {
+        "image": "4/j.jpg",
+        "question": {
+            "fa": "پریز بالا در کدام کشور استفاده میشود ؟",
+            "en": "Which country use this plug ?"
+        }, 
+        "answers": {
+            "1":{"fa":"سوییس", "en": "Switzerland " },
+            "2":{"fa": "ایالات متحده آمریکا", "en": "United States" }, 
+            "3": {"fa": "انگلیس", "en": "United Kingdom"}, 
+            "4": {"fa": "ایران ", "en": "Iran"}
+        },
+        "correct": "1"
+    },
+    8: {
+        "image": "4/m.jpg",
+        "question": {
+            "fa": "پریز بالا در کدام کشور استفاده میشود ؟",
+            "en": "Which country use this plug ?"
+        }, 
+        "answers": {
+            "1":{"fa":"آفریقای جنوبی", "en": "South Africa   " },
+            "2":{"fa": "  چین", "en": "China" }, 
+            "3": {"fa": " عربستان سعودی    ", "en": "Saudi Arabia"}, 
+            "4": {"fa": "ژاپن ", "en": "Japan"}
+        },
+        "correct": "1"
+    }
+}
+
+var dmData = [...Object.values(level1), ...Object.values(level2), ...Object.values(level3), ...Object.values(level4)];
