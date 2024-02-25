@@ -1,8 +1,13 @@
 // bruh
-function preload(level) {
+function preload(level, dm=false) {
   //  console.log("preloading ...");
     var start = Date.now();
-    let leve = window[level];
+    let leve;
+    if (dm == true) {
+        leve = level;
+    } else {
+        leve = window[level];
+    }
     let keys = Object.keys(leve);
     let index = 0;
 
@@ -11,6 +16,8 @@ function preload(level) {
     function preloadNextImage() {
         if (index < keys.length) {
             let key = keys[index];
+            // console.log(leve);
+  //          console.log(key); 
             let image = "questions/" + leve[key].image;
             //console.log(image);
             preloadImage(image, preloadNextImage);

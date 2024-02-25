@@ -329,6 +329,7 @@ body {
     display: block;
     max-width: 500px;
     border-radius: 10px;
+    height: 40vh;
     /* aspect-ratio: auto; */
     max-height: 400px;
 }
@@ -882,3 +883,28 @@ cache > * {
     }
   }
   
+  @font-face {
+    font-family: digit-font;
+    src: url(digitfont.ttf);
+  }
+
+ .middleeast {
+    display: none;
+    height: 45px !important;
+    font-family: digit-font;
+    font-size: 2.8rem;
+    /* padding-right: 10px; */
+    color: red;
+    /* text-shadow: 1px 1px 4px #ff1a1a; */
+    /* display: block; */
+    text-align: center;
+    margin: 5px auto -46px auto;
+    position: relative;
+    z-index: 2;
+    width: 120px;
+    background: #0d449c;
+    /* box-shadow: 0px 1px 10px white; */
+    border-radius: 0 0 10px 10px;
+    border: 1px solid white;
+    border-top: 0;
+}

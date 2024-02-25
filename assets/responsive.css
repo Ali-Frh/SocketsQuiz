@@ -105,3 +105,39 @@
         width: 70%;
     }
 }
+
+@media (max-height: 620px) {
+    .qfbtn {
+        font-size: 1rem;
+        height: 50px;
+    }
+
+    .qfquestion > img {
+        max-height: 40vh;
+    }
+
+    .qfans {
+        gap: 15px;
+    }
+
+    .qfhead {
+        padding: 10px 0;
+    }
+
+.qfquestring {
+ font-size: 1.5rem;
+}
+
+.west.lives > img {
+    width :  30px;
+}
+
+.qfgrid {
+    height: 85vh;
+}
+
+.scoreboard {
+    height: 10vh;
+    margin: 25px auto -25px auto;
+}
+}

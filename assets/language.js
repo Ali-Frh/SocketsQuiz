@@ -116,6 +116,9 @@ strings = {
        }, 
        "loading2": {
         "fa": "لطفا کمی صبر کنید", "en": "Be patient a little"
+       },
+       "deathmatch": {
+        "fa": "بازی مرگ ", "en": "Death Match"
        }
 
     } 

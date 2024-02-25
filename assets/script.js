@@ -45,6 +45,13 @@ function falevel(level) {
         document.getElementById("menu-en").style.display="none";
         startGame("level3");
 
+    }  else if (level=="4"){
+        document.getElementById("menu-en").style.display="none";
+        startGame("level4");
+
+    } else if (level == "5") {
+        document.getElementById("menu-en").style.display="none";
+        deathMatch(); 
     }
 
 }
@@ -81,8 +88,8 @@ function updateLevelState() {
         case "4":
             document.getElementsByClassName("l2lock")[0].style.display="none";
             document.getElementsByClassName("l3lock")[0].style.display="none";
-            document.getElementsByClassName("l4lock")[0].style.display="block";
-            document.getElementsByClassName("l5lock")[0].style.display="block";
+            document.getElementsByClassName("l4lock")[0].style.display="none";
+            document.getElementsByClassName("l5lock")[0].style.display="none";
             break;
         default:
             break;
@@ -262,6 +269,9 @@ function shuffleNumbersList(length) {
 //   console.log(shuffledList);
   
 function showQuestion(level, questionIter) {
+
+
+        
     document.getElementsByClassName ("from")[0 ].innerHTML = questionIter ;
     
     // pop prev. question
@@ -270,8 +280,8 @@ function showQuestion(level, questionIter) {
         document.body.removeChild(el);
     });
 
-    var questions = window[level];
-    var question = questions[window.order[questionIter-1]];
+    var questions = window[questions];
+    var question = window.questions[window.order[questionIter-1]];
     // console.log(window.order[questionIter]);
 
     var lang = getCookie("user_lang");
@@ -279,7 +289,7 @@ function showQuestion(level, questionIter) {
 
 
     let el = document.createElement("div");
-    el.classList.add( level + "-" + questionIter );
+    // el.classList.add( level + "-" + questionIter );
     el.classList . add("temp") ;
 
     let temp = question_structure;
@@ -309,7 +319,10 @@ function showQuestion(level, questionIter) {
     // el.innerHTML = question_structure;
     document.body.appendChild(el);
 
-
+    if(level == "deathmatch") {
+        document.querySelector("body > div.temp > div.qfcontainer > div > div.qfquestion > div").style.display="block";
+    }
+    
     let element = document.getElementsByClassName("qfquestion")[1];
     element.classList.add("dissolve-enter");
 
@@ -332,6 +345,8 @@ function showQuestion(level, questionIter) {
 
 function youSuck () {
     // let lang  =  getCookie("user_lang"); 
+
+    window.playing = false; 
     let template = document.getElementById("lost"); 
     let temp =  document.createElement("div");
     sound ("mixkit-retro-arcade-game-over-470.mp3"); 
@@ -362,8 +377,12 @@ function closeNQuit() {
 
 function tryAgain () {
     closePrompts();
-
-    startGame(window.currentLevel );
+    if (window.currentLevel == "deathmatch") {
+        deathMatch();
+    } else {
+        
+        startGame(window.currentLevel );
+    }
 }
 
 function submit(which, el) {
@@ -524,12 +543,14 @@ function closeFlee(){
 function flee() {
     // document.getElementById("quit").style.display="none";
     closePrompts();
+    window.playing = false;     
     
     home();
 }
 
 
 function showResult() {
+    window.playing = false;
     // document.getElementById("res").style.display="block";
     let template = document.getElementById("res"); 
     let temp =  document.createElement("div");
@@ -571,8 +592,9 @@ function startGame(level){
 
     preload(level);
 
-    var questions = window[level];
-     total_questions = Object.keys(questions).length;
+    // var questions = window[level];
+    questions = window[level];
+     total_questions = Object.keys(window.questions).length;
     // console.log (total_questions);
     order = shuffleNumbersList(total_questions);
     // console.log(order);
@@ -594,6 +616,113 @@ function startGame(level){
        showQuestion(currentLevel, questionIter); 
     // });
 }
+
+function shuffle(array) {
+    let currentIndex = array.length ;
+    let temporaryValue, randomIndex;
+  
+
+    while (currentIndex !== 0) {
+  randomIndex = Math.floor(Math.random() * currentIndex);
+  currentIndex--;
+
+  temporaryValue = array[currentIndex];
+  array[currentIndex] = array[randomIndex];
+  array[randomIndex] = temporaryValue;
+}
+
+
+
+return array;
+  }
+
+  const sleep = (milliseconds) => {
+    return new Promise(resolve => setTimeout(resolve, milliseconds))
+  }
+  
+function timer(recu=false) {
+    if (recu == false) {
+        time = 50;
+    }
+
+    var x = setInterval(()=>{
+        window.time--;
+        console.log(window.time);
+        if (time <= 0) {
+            console.log("ended"); 
+        } else {
+            sleep(1000);
+            timer(recu=true);
+        }
+    }, 1000);
+}
+function countdown() {
+    var timeLeft = 5900;
+    
+    var countdownTimer = setInterval(function() {
+      timeLeft-=50;
+    
+      if (timeLeft <= 0 || window.playing == false) {
+          clearInterval(countdownTimer);
+          console.log('Countdown finished!');
+
+          if (window.playing == true)  {
+            youSuck (); 
+          }
+      } else {
+        try {
+            let time = ""+Math.floor(timeLeft /100);
+            if (timeLeft < 1000 ) {time = "0" + time;  }
+            document.querySelector("body > div.temp > div.qfcontainer > div > div.qfquestion > div").innerHTML = "00:" + time;
+        } catch (e){
+            console.log("eh, "+e);
+        }
+        // console.log('Time left: ' + timeLeft + ' seconds');
+      }
+    }, 500);
+  }
+  
+  
+function deathMatch(){
+    const shuffledArray = shuffle(dmData);
+    const level = shuffledArray.slice(0, 10);
+   // level.pop(0);
+   // / / / / / console.log(level);
+    var lang = getCookie("user_lang");
+    question_structure = document.getElementById("qfues").innerHTML;
+
+    playing = true;
+    let temp = document.getElementById("loading"); 
+    temp.innerHTML = translatePlaceholders(temp.innerHTML)
+
+
+    preload(level, dm=true);
+
+    questions = level;
+     total_questions = Object.keys(questions).length;
+    // console.log (total_questions);
+    //order = shuffleNumbersList(total_questions);
+    // console.log(order);
+    order = [0,1,2,3,4,5,6,7,8,9];
+    document.getElementsByClassName ("to")[0 ].innerHTML = total_questions ;
+    
+    currentLevel = "deathmatch";
+    questionIter = 1;
+    document.getElementsByClassName ("from")[0 ].innerHTML = questionIter ;
+    score = 0;
+    lives = 4;
+    decreaseLives(); // refills hearts
+
+
+    // // var total
+    // // order.forEach((index) => {
+        index = order[questionIter-1];
+        let question = questions[index];
+       showQuestion("deathmatch", questionIter); 
+       countdown();
+    // });
+}
+
 
 // show questions on new elements that copied from orig ques, so you didnt have to bring html to js bruh
 
